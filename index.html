@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame model viewer</title>
+    <meta name="description" content="A-Frame model viewer">
+    <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-mixin id="wall" geometry="primitive: plane; width: 4; height: 4"  material="color: rgb(131, 164, 179); metalness: 0; roughness: 1"></a-mixin>
+      </a-assets>
+      <a-entity mixin="wall" position="0 2 -2" rotation="0 0 0"></a-entity>
+      <a-entity mixin="wall" position="2 2 0" rotation="0 -90 0"></a-entity>
+      <a-entity mixin="wall" position="0 2 2" rotation="0 180 0"></a-entity>
+      <a-entity mixin="wall" position="-2 2 0" rotation="0 90 0"></a-entity>
+
+      <a-entity mixin="wall" position="0 4 0" rotation="90 0 0"></a-entity>
+      <a-entity mixin="wall" position="0 0 0" rotation="-90 0 0"></a-entity>
+
+      <a-entity light="type: point; color: #FFF; intensity: 0.9" position="0 3.8 4"></a-entity>
+
+      <a-entity geometry="primitive: cylinder; height: 0.6; radius: 0.5" material="color: rgb(131, 164, 179)" position="0 0.3 0"></a-entity>
+
+      <a-entity collada-model="src: url(model/trex.dae)" position="0 1 0"></a-entity>
+
+      <a-sky color="#333333"></a-sky>
+    </a-scene>
+    <script>
+    </script>
+  </body>
+</html>
+
+
+
